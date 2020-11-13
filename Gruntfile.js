@@ -12,12 +12,12 @@ module.exports = function (grunt) {
       dist: {
         //被合并的文件的路径
         src: [
-          "src/excel.js",
           "src/Blob.js",
           "src/FileSaver.js",
           "src/jszip.js",
           "src/xlsx.js",
-          "src/polyfill.js"
+          "src/polyfill.js",
+          "src/excel.js",
         ],
         //被合成的文件路径
         dest: "layui_exts/excel.js"
