@@ -661,15 +661,15 @@ Note: since JSZip 3 removed critical functionality, this version assigns to the
 `JSZipSync` variable.  Another JSZip version can be loaded in parallel.
 */
 (function(e){
-  if("object"==typeof exports&&"undefined"!=typeof module&&"undefined"==typeof DO_NOT_EXPORT_JSZIP)module.exports=e();
-  else if("function"==typeof define&&define.amd&&"undefined"==typeof DO_NOT_EXPORT_JSZIP){JSZipSync=e();define([],e);}
-  else{
+  // if("object"==typeof exports&&"undefined"!=typeof module&&"undefined"==typeof DO_NOT_EXPORT_JSZIP)module.exports=e();
+  // else if("function"==typeof define&&define.amd&&"undefined"==typeof DO_NOT_EXPORT_JSZIP){JSZipSync=e();define([],e);}
+  // else{
     var f;
     "undefined"!=typeof window?f=window:
       "undefined"!=typeof global?f=global:
         "undefined"!=typeof $ && $.global?f=$.global:
           "undefined"!=typeof self&&(f=self),f.JSZipSync=e()
-  }
+  // }
 }(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(_dereq_,module,exports){
     'use strict';
 // private property
@@ -9644,7 +9644,8 @@ exports.inflateUndermine = inflateUndermine;
     module.exports = ZStream;
   },{}]},{},[9])
 (9)
-}));/*---------split--------*//*! xlsx.js (C) 2013-present SheetJS -- http://sheetjs.com */
+}));
+/*---------split--------*//*! xlsx.js (C) 2013-present SheetJS -- http://sheetjs.com */
 /* vim: set ts=2: */
 /*exported XLSX */
 /*global global, exports, module, require:false, process:false, Buffer:false, ArrayBuffer:false */
@@ -33045,9 +33046,9 @@ if (typeof layui !== 'undefined') {
 
 if(typeof exports !== 'undefined') {
   exports = LAY_EXCEL;
-  export default LAY_EXCEL;
 } else if(typeof module !== 'undefined' && module.exports) {
   module.exports = LAY_EXCEL;
+  export LAY_EXCEL;
 } else if(typeof define === 'function' && define.amd) {
   define('lay-excel', function() { return LAY_EXCEL; });
 } else {
